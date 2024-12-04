@@ -1,0 +1,42 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Modules and dependencies
+node_modules/
+jspm_packages/
+
+# Environment variables
+.env
+
+# Build outputs
+dist/
+build/
+out/
+
+# IDE and Editor settings
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Miscellaneous
+*.log.*
+*.backup
+*.orig
+*.rej
+
+# Database dumps
+*.sql
+*.sqlite
+*.sqlite3

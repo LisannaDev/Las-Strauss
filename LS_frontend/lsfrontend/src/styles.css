@@ -1,0 +1,195 @@
+/* Reset styles */
+* {
+    /* margin: 0;
+    padding: 0;
+    box-sizing: border-box; */
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #202020;
+    min-height: 100vh;
+}
+
+/* Conteneur principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* En-têtes */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Grille pour les cartes */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cartes de produits */
+.card {
+    width: 100%;
+    max-width: 300px;
+    flex: 1 1 200px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #b71c1c;
+}
+
+/* Formulaires */
+input, select, textarea, button {
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+    border-color: #2196f3;
+}
+
+/* Boutons */
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+button.secondary {
+    background-color: #f44336;
+}
+
+button.secondary:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    input, select, textarea, button {
+        font-size: 16px;
+    }
+}
+
+
+/* Admin Dashboard */
+
+/* Conteneur principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Titre principal */
+.main-heading {
+    color: #D32F2F;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Barre de navigation des onglets */
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Boutons des onglets */
+.tab-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-bottom 0.3s;
+}
+
+/* Onglet actif */
+.active-tab {
+    background-color: #D32F2F;
+    color: #fff;
+    border-bottom: 3px solid #D32F2F;
+}
+
+/* Contenu des onglets */
+.tab-content {
+    margin-top: 20px;
+}
