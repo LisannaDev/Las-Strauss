@@ -305,7 +305,7 @@ app.get('/api/orders', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
 });
 
@@ -381,3 +381,15 @@ app.get('/api/products/latest', async (req, res) => {
         res.status(500).json({ error: 'Erreur serveur' });
     }
 });
+
+// Admin Login Route
+app.post('/api/admin/login', (req, res) => {
+    const { password } = req.body;
+
+    if (password === process.env.ADMIN_PASSWORD) {
+        res.status(200).send({ message: 'Connexion réussie.' });
+    } else {
+        res.status(401).send({ error: 'Mot de passe incorrect.' });
+    }
+});
+

@@ -11,7 +11,7 @@ import logo from './assets/Logo.png';
 function App() {
     const [isAdmin, setIsAdmin] = useState(false);
     const [password, setPassword] = useState('');
-    const adminPassword = 'monSuperMotDePasse';
+ 
 
     const [products, setProducts] = useState([]); // Liste des produits
     const [orders, setOrders] = useState([]); // Liste des commandes
@@ -27,13 +27,27 @@ function App() {
     }, [cart]);
 
     // Fonction pour gérer la connexion administrateur
-    const handleLogin = () => {
-        if (password === adminPassword) {
-            setIsAdmin(true);
-        } else {
-            alert('Mot de passe incorrect.');
+    const handleLogin = async () => {
+        try {
+            const response = await fetch('http://localhost:5000/api/admin/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ password }),
+            });
+    
+            if (response.ok) {
+                setIsAdmin(true);
+            } else {
+                alert('Mot de passe incorrect.');
+            }
+        } catch (error) {
+            console.error('Erreur réseau lors de la connexion admin :', error);
+            alert('Erreur de connexion au serveur.');
         }
     };
+    
 
     // Ajouter une commande
     const handleAddOrder = async (order) => {

@@ -40,3 +40,7 @@ out/
 *.sql
 *.sqlite
 *.sqlite3
+
+uploads/
+invoices/
+
