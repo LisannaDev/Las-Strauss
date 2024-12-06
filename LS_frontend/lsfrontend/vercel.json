@@ -1,13 +1,16 @@
 {
+    "version": 2,
     "builds": [
       {
-        "src": "vite.config.ts",
-        "use": "@vercel/static-build",
-        "config": {}
+        "src": "lsfrontend/package.json",
+        "use": "@vercel/node"
       }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/" }
+      {
+        "src": "/(.*)",
+        "dest": "lsfrontend/dist/index.html"
+      }
     ]
   }
   
