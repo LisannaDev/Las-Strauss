@@ -18,7 +18,7 @@ const ProductManagement = () => {
     // Fonction pour récupérer les produits
     const fetchProducts = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/products');
+            const response = await fetch('https://las-strauss.onrender.com/api/products');
             if (response.ok) {
                 const data = await response.json();
                 setProducts(data);
@@ -50,7 +50,7 @@ const ProductManagement = () => {
             formData.append('category', newProduct.category);
             formData.append('image', newProduct.image);
 
-            const response = await fetch('http://localhost:5000/api/products', {
+            const response = await fetch('https://las-strauss.onrender.com/api/products', {
                 method: 'POST',
                 body: formData,
             });
@@ -74,7 +74,7 @@ const ProductManagement = () => {
     const deleteProduct = async (id) => {
         if (window.confirm('Voulez-vous vraiment supprimer ce produit ?')) {
             try {
-                const response = await fetch(`http://localhost:5000/api/products/${id}`, { method: 'DELETE' });
+                const response = await fetch(`https://las-strauss.onrender.com/api/products/${id}`, { method: 'DELETE' });
                 if (response.ok) {
                     fetchProducts(); // Rafraîchir la liste des produits
                     alert('Produit supprimé avec succès.');
@@ -117,7 +117,7 @@ const ProductManagement = () => {
                 formData.append('image', newProduct.image); // Ajouter une nouvelle image si modifiée
             }
 
-            const response = await fetch(`http://localhost:5000/api/products/${editingProduct.id}`, {
+            const response = await fetch(`https://las-strauss.onrender.com/api/products/${editingProduct.id}`, {
                 method: 'PATCH',
                 body: formData,
             });
@@ -176,7 +176,7 @@ const ProductManagement = () => {
                         }}
                     >
                         <img
-                            src={`http://localhost:5000${product.image_url}`}
+                            src={`https://las-strauss.onrender.com${product.image_url}`}
                             alt={product.name}
                             style={{
                                 width: '60%',

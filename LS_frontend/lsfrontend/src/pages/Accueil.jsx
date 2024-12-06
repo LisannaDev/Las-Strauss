@@ -7,7 +7,7 @@ const Accueil = () => {
     // Fonction pour récupérer les trois derniers produits
     const fetchLatestProducts = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/products/latest'); // API pour récupérer les 3 derniers produits
+            const response = await fetch('https://las-strauss.onrender.com/api/products/latest'); // API pour récupérer les 3 derniers produits
             if (response.ok) {
                 const data = await response.json();
                 setLatestProducts(data);
@@ -49,7 +49,7 @@ const Accueil = () => {
                         }}
                     >
                         <img
-                            src={`http://localhost:5000${product.image_url}`}
+                            src={`https://las-strauss.onrender.com${product.image_url}`}
                             alt={product.name}
                             style={{
                                 width: '60%', // S'étend sur toute la largeur de la carte

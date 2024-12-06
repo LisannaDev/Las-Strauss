@@ -17,7 +17,7 @@ const Cart = ({ cart, updateCartQuantity, removeFromCart }) => {
                 >
                     <div>
                         <img
-                            src={`http://localhost:5000${item.image_url}`}
+                            src={`https://las-strauss.onrender.com${item.image_url}`}
                             alt={item.name}
                             style={{
                                 width: '50PX',

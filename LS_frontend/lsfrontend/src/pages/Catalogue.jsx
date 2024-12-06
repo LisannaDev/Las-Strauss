@@ -11,7 +11,7 @@ const Catalogue = ({ addToCart }) => {
     // Fonction pour récupérer les produits depuis l'API
     const fetchProducts = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/products');
+            const response = await fetch('https://las-strauss.onrender.com/api/products');
             if (!response.ok) {
                 throw new Error('Erreur lors de la récupération des produits.');
             }
@@ -129,7 +129,7 @@ const Catalogue = ({ addToCart }) => {
                         }}
                     >
                         <img
-                            src={`http://localhost:5000${product.image_url}`}
+                            src={`https://las-strauss.onrender.com${product.image_url}`}
                             alt={product.name}
                             style={{
                                 width: '60%',
