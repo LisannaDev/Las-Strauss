@@ -129,7 +129,7 @@ const Catalogue = ({ addToCart }) => {
                         }}
                     >
                         <img
-                            src={`https://las-strauss.onrender.com${product.image_url}`}
+                            src={`https://las-strauss.onrender.com/${product.image_url}`}
                             alt={product.name}
                             style={{
                                 width: '60%',

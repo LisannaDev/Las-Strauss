@@ -123,7 +123,7 @@ const OrdersPage = () => {
                         <p>
                             <strong>Facture :</strong>{' '}
                             {order.invoice_url ? (
-                                <a href={`https://las-strauss.onrender.com${order.invoice_url}`} target="_blank" rel="noopener noreferrer">
+                                <a href={`https://las-strauss.onrender.com/${order.invoice_url}`} target="_blank" rel="noopener noreferrer">
                                     Télécharger
                                 </a>
                             ) : (

@@ -49,7 +49,7 @@ const Accueil = () => {
                         }}
                     >
                         <img
-                            src={`https://las-strauss.onrender.com${product.image_url}`}
+                            src={`https://las-strauss.onrender.com/${product.image_url}`}
                             alt={product.name}
                             style={{
                                 width: '60%', // S'étend sur toute la largeur de la carte
