@@ -20,6 +20,13 @@ const pool = new Pool({
     },
 });
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/favicon.ico', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'favicon.ico'));
+});
+
+
 // Configurer le serveur
 const app = express();
 app.use(cors({
