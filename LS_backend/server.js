@@ -20,7 +20,7 @@ const pool = new Pool({
     },
 });
 
-app.get('/favicon.ico', (req, res) => res.status(204).end());
+
 
 // Configurer le serveur
 const app = express();
