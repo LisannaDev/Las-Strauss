@@ -23,8 +23,9 @@ const pool = new Pool({
 // Configurer le serveur
 const app = express();
 app.use(cors({
-    origin: 'https://las-strauss.vercel.app',
+    origin: '*', // Permet les requêtes depuis n'importe quelle origine, en développement
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+    allowedHeaders: ['Content-Type'],
   }));
   
 app.use(bodyParser.json());
