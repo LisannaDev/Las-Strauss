@@ -9,7 +9,16 @@ const path = require('path');
 const PDFDocument = require('pdfkit');
 const fs = require('fs');
 const db = require('./db');
+const { Pool } = require('pg');
 
+
+// Connexion à la base de données PostgreSQL avec les informations de l'environnement
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false, // Ce paramètre peut être nécessaire pour Render
+    },
+});
 
 // Configurer le serveur
 const app = express();
