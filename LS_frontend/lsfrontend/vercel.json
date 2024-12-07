@@ -1,17 +1,15 @@
 {
+    "version": 2,
     "builds": [
       {
         "src": "LS_frontend/lsfrontend/package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "LS_frontend/lsfrontend/dist"
-        }
+        "use": "@vercel/static-build"
       }
     ],
-    "rewrites": [
+    "routes": [
       {
-        "source": "/(.*)",
-        "destination": "/"
+        "src": "/(.*)",
+        "dest": "/LS_frontend/lsfrontend/$1"
       }
     ]
   }
