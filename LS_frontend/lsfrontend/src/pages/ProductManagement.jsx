@@ -176,7 +176,7 @@ const ProductManagement = () => {
                         }}
                     >
                         <img
-                            src={`${import.meta.env.VITE_API_URL}/${product.image_url}`}
+                            src={`${import.meta.env.VITE_API_URL}${product.image_url}`}
                             alt={product.name}
                             style={{
                                 width: '60%',
