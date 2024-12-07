@@ -17,7 +17,7 @@ const Cart = ({ cart, updateCartQuantity, removeFromCart }) => {
                 >
                     <div>
                         <img
-                            src={`https://las-strauss.onrender.com${item.image_url}`}
+                            src={`${import.meta.env.VITE_API_URL}${item.image_url}`}
                             alt={item.name}
                             style={{
                                 width: '50PX',
