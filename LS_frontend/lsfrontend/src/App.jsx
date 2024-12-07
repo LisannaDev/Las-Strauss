@@ -29,7 +29,7 @@ function App() {
     // Fonction pour gérer la connexion administrateur
     const handleLogin = async () => {
         try {
-            const response = await fetch('https://las-strauss.onrender.com/api/admin/login', {
+            const response = await fetch('${import.meta.env.VITE_API_URL}/api/admin/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ function App() {
     const handleAddOrder = async (order) => {
         console.log("Données de commande envoyées :", order);
         try {
-            const response = await fetch("https://las-strauss.onrender.com/api/orders", {
+            const response = await fetch("${import.meta.env.VITE_API_URL}/api/orders", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

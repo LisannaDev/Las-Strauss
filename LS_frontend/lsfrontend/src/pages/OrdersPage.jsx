@@ -7,7 +7,7 @@ const OrdersPage = () => {
     // Fonction pour récupérer les commandes
     const fetchOrders = async () => {
         try {
-            const response = await fetch('https://las-strauss.onrender.com/api/orders');
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders`);
             if (!response.ok) {
                 throw new Error('Erreur lors de la récupération des commandes');
             }
@@ -27,7 +27,7 @@ const OrdersPage = () => {
     // Mettre à jour le statut d'une commande
     const updateOrderStatus = async (orderId, newStatus) => {
         try {
-            const response = await fetch(`https://las-strauss.onrender.com/api/orders/${orderId}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${orderId}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ const OrdersPage = () => {
                         <p>
                             <strong>Facture :</strong>{' '}
                             {order.invoice_url ? (
-                                <a href={`https://las-strauss.onrender.com/${order.invoice_url}`} target="_blank" rel="noopener noreferrer">
+                                <a href={`${import.meta.env.VITE_API_URL}/${order.invoice_url}`} target="_blank" rel="noopener noreferrer">
                                     Télécharger
                                 </a>
                             ) : (

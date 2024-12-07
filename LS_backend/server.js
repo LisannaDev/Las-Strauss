@@ -13,7 +13,11 @@ const db = require('./db');
 
 // Configurer le serveur
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://las-strauss.vercel.app',
+    methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+  }));
+  
 app.use(bodyParser.json());
 
 // Créer dynamiquement le dossier "uploads" s'il n'existe pas
