@@ -71,9 +71,6 @@ const Accueil = () => {
                     Aucun produit disponible pour le moment.
                 </p>
             )}
-            <h2 style={{ textAlign: 'center', color: '#555', marginBottom: '20px' }}>
-                Contactez Lisanna
-            </h2>
         </div>
     );
 };
