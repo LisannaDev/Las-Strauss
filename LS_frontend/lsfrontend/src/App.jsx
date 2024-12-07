@@ -21,6 +21,8 @@ function App() {
         return savedCart ? JSON.parse(savedCart) : [];
     });
 
+    console.log(import.meta.env.VITE_API_URL);
+    
     // Sauvegarder le panier dans localStorage à chaque modification
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart));
