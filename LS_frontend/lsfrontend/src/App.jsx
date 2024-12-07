@@ -22,6 +22,7 @@ function App() {
     });
 
     console.log(import.meta.env.VITE_API_URL);
+
     
     // Sauvegarder le panier dans localStorage à chaque modification
     useEffect(() => {
