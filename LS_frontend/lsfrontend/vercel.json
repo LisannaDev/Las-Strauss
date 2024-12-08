@@ -3,13 +3,16 @@
     "builds": [
       {
         "src": "LS_frontend/lsfrontend/package.json",
-        "use": "@vercel/static-build"
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist"
+        }
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/LS_frontend/lsfrontend/$1"
+        "dest": "/dist/$1"
       }
     ]
   }
